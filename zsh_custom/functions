@@ -1,0 +1,11 @@
+sha1fingerprint () {
+    openssl x509 -sha1 -noout -fingerprint -in $1
+}
+
+phplinter () {
+    find . -type f -iname "*.php" -not -path "./vendor/*" -print0 | xargs -0 -P 0 -n 1 php -l
+}
+
+youtube-dl-mp3 () {
+    youtube-dl --extract-audio --audio-format mp3 $1
+}

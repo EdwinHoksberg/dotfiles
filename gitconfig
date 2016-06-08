@@ -1,0 +1,19 @@
+[user]
+	name = Edwin Hoksberg
+	email = ehoksberg@transip.nl
+[push]
+	default = simple
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+    st = status
+    ll = log --graph --oneline  --decorate --date=short --all --pretty=format:'%ad %h %Cgreen%an %Cred%d %Creset%s'
+[core]
+    autocrlf = input
+    safecrlf = true
+	excludesfile = ~/.gitignore
+[commit]
+	gpgsign = true
+[merge]
+	tool = meld

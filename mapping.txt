@@ -1,0 +1,12 @@
+zshrc:.zshrc
+zsh_custom:.zsh_custom
+
+gitconfig:.gitconfig
+gitignore:.gitignore
+
+vim:.vim
+vimrc:.vimrc
+
+gnupg/gpg.conf:.gnupg/gpg.conf
+gnupg/gpg-agent.conf:.gnupg/gpg-agent.conf
+config/redshift.conf:.config/redshift.conf
