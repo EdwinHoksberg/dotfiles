@@ -3,7 +3,12 @@ sha1fingerprint () {
 }
 
 phplinter () {
-    find . -type f -iname "*.php" -not -path "./vendor/*" -print0 | xargs -0 -P 0 -n 1 php -l
+    DIR="."
+    if [[ -n "$1" ]]; then
+        DIR=$1
+    fi
+
+    find $DIR -type f -iname "*.php" -not -path "./vendor/*" -print0 | xargs -0 -P 0 -n 1 php -l
 }
 
 youtube-dl-mp3 () {
