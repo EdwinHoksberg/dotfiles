@@ -4,7 +4,7 @@
   suppress_multiple_term_dialog = True
 [keybindings]
   close_term = <Primary>w
-  Next_tab = <Primary>Tab
+  next_tab = <Primary>Tab
   prev_tab = <Primary><Shift>Tab
   switch_to_tab_1 = <Primary>1
   switch_to_tab_2 = <Primary>2
