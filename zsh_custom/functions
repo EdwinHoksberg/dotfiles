@@ -12,5 +12,5 @@ phplinter () {
 }
 
 youtube-dl-mp3 () {
-    youtube-dl --extract-audio --audio-format mp3 $1
+    youtube-dl -f bestaudio --audio-quality 0 --extract-audio --audio-format mp3 -i -o '%(title)s.%(ext)s' $1
 }
