@@ -23,7 +23,7 @@ for LINK in $(cat $MAPPING); do
   if [[ -e $TO ]]; then
     echo "Target '${TO}' already exists, skipping..." >&2;
   else
-    ln --verbose --symbolic $FROM $TO;
+    ln -vs $FROM $TO;
   fi
 done
 
