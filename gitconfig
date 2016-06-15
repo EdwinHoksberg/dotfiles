@@ -17,3 +17,5 @@
 	gpgsign = true
 [merge]
 	tool = meld
+[diff]
+	compactionHeuristic = true
