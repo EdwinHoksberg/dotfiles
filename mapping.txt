@@ -9,4 +9,6 @@ vimrc:.vimrc
 
 gnupg/gpg.conf:.gnupg/gpg.conf
 gnupg/gpg-agent.conf:.gnupg/gpg-agent.conf
+
 config/redshift.conf:.config/redshift.conf
+config/terminator:.config/terminator/config
