@@ -14,7 +14,7 @@ plugins=(gitfast, history-substring-search, docker, composer)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/go/bin:$HOME/STACK/Code/Go/bin:$HOME/.phpbrew/bin:$PATH
+export PATH=/sbin:/usr/sbin:/usr/local/bin:/usr/local/go/bin:$HOME/bin:$HOME/STACK/Code/Go/bin:$HOME/.phpbrew/bin:$PATH
 export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export GOPATH=$HOME/STACK/Code/Go
@@ -26,6 +26,6 @@ alias gpg="gpg2"
 
 # Shell autocompletion
 source $HOME/.phpbrew/bashrc
-source $HOME/.phpbrew/_phpbrew
+source $ZSH_CUSTOM/_phpbrew
 
 source $ZSH_CUSTOM/functions
