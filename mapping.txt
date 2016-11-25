@@ -1,6 +1,3 @@
-zshrc:.zshrc
-zsh_custom:.zsh_custom
-
 gitconfig:.gitconfig
 gitignore:.gitignore
 
