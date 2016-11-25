@@ -3,6 +3,22 @@ config/fish/fishd.c85b762603e6:.config/fish/fishd.c85b762603e6
 config/fish/functions/fish_command_timer.fish:.config/fish/functions/fish_command_timer.fish
 config/fish/functions/fish_prompt.fish:.config/fish/functions/fish_prompt.fish
 
+i3/config:.i3/config
+i3/blocks.conf:.i3/blocks.conf
+i3/workspace-1.json:.i3/workspace-1.json
+i3/workspace-2.json:.i3/workspace-2.json
+i3/workspace-3.json:.i3/workspace-3.json
+
+i3blocks/batterybar:.i3blocks/batterybar
+i3blocks/containers:.i3blocks/containers
+i3blocks/disk:.i3blocks/disk
+i3blocks/iface:.i3blocks/iface
+i3blocks/load_average:.i3blocks/load_average
+i3blocks/memory:.i3blocks/memory
+i3blocks/temperature:.i3blocks/temperature
+i3blocks/volume:.i3blocks/volume
+i3blocks/whatismyip:.i3blocks/whatismyip
+
 gitconfig:.gitconfig
 gitignore:.gitignore
 
