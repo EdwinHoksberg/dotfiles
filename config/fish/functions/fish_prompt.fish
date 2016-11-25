@@ -4,8 +4,8 @@ function fish_prompt -d "Write out the prompt"
 
     set -l prompt_symbol ''
     switch $USER
-        case root toor; set prompt_symbol '#' 
-        case '*';  set prompt_symbol '$' 
+        case root toor; set prompt_symbol '#'
+        case '*';  set prompt_symbol '$'
     end
 
     # Git branch
@@ -14,15 +14,9 @@ function fish_prompt -d "Write out the prompt"
         set git_branch (string sub --length 8 (cat .git/HEAD))
     end
 
-    set -l git_dirty ''
-    #if test (git status 2> /dev/null ^&1 | tail -n1) != 'nothing to commit (working directory clean)'
-    #    set git_dirty '⚡'
-    #end
+    if test -z $git_branch
+        set git_branch ''
+    end
 
-    #set -l failure ''
-    #if test $status -ne 0
-    #    set failure (printf "\nFAIL: %s\" $status)
-    #end
-    
-    printf "\n%s%s%s@%s%s: %s%s %s%s %s%s\n%s%s " (set_color magenta) $USER (set_color grey) (set_color yellow) (hostname -s) (set_color blue) $pwd (set_color green) $git_branch (set_color red) $git_dirty (set_color normal) $prompt_symbol
+    printf "\n%s%s%s@%s%s: %s%s %s%s %s\n%s " (set_color magenta) $USER (set_color grey) (set_color yellow) (hostname -s) (set_color blue) $pwd (set_color green) $git_branch (set_color normal) $prompt_symbol
 end
