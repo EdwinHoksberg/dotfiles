@@ -3,29 +3,33 @@
   window_state = maximise
   suppress_multiple_term_dialog = True
 [keybindings]
-  close_term = <Primary>w
+  switch_to_tab_10 = <Primary>0
   next_tab = <Primary>Tab
-  prev_tab = <Primary><Shift>Tab
-  switch_to_tab_1 = <Primary>1
-  switch_to_tab_2 = <Primary>2
-  switch_to_tab_3 = <Primary>3
-  switch_to_tab_4 = <Primary>4
   switch_to_tab_5 = <Primary>5
+  prev_tab = <Primary><Shift>Tab
   switch_to_tab_6 = <Primary>6
   switch_to_tab_7 = <Primary>7
+  switch_to_tab_4 = <Primary>4
+  close_term = <Primary>w
+  switch_to_tab_2 = <Primary>2
+  switch_to_tab_3 = <Primary>3
+  switch_to_tab_1 = <Primary>1
   switch_to_tab_8 = <Primary>8
   switch_to_tab_9 = <Primary>9
-  switch_to_tab_10 = <Primary>0
 [profiles]
   [[default]]
     palette = "#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff:#000000:#f2777a:#99cc99:#ffcc66:#6699cc:#cc99cc:#66cccc:#ffffff"
-    foreground_color = "#cccccc"
-    background_color = "#2d2d2d"
-    cursor_color = "#cccccc"
-    font = Source Code Pro Medium 10
-    background_image = None
-    use_system_font = False
     copy_on_selection = True
+    background_image = None
+    background_darkness = 0.89
+    background_type = transparent
+    use_system_font = False
+    cursor_color = "#cccccc"
+    foreground_color = "#cccccc"
+    scroll_on_output = False
+    show_titlebar = False
+    font = Source Code Pro Medium 10
+    background_color = "#2d2d2d"
     scrollback_infinite = True
     show_titlebar = False
 [layouts]

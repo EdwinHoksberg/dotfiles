@@ -11,10 +11,10 @@
     ll = log --graph --oneline  --decorate --date=short --all --pretty=format:'%ad %h %Cgreen%an %Cred%d %Creset%s'
 [core]
     autocrlf = input
-    safecrlf = true
+    safecrlf = warn
 	excludesfile = ~/.gitignore
 [commit]
-	gpgsign = true
+    gpgsign = true
 [merge]
 	tool = meld
 [diff]
