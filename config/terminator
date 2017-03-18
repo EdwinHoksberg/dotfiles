@@ -27,6 +27,7 @@
     use_system_font = False
     copy_on_selection = True
     scrollback_infinite = True
+    show_titlebar = False
 [layouts]
   [[default]]
     [[[child0]]]
