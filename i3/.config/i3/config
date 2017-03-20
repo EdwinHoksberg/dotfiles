@@ -160,9 +160,7 @@ bindsym $mod+Shift+bracketleft move workspace to output left
 bar {
   position top
   font pango:Source Code Pro-10 10
-  status_command i3blocks -c $HOME/.i3/blocks.conf
-
-  tray_output eDP1
+  status_command i3blocks -c $HOME/.config/i3/blocks.conf
 
   colors {
     separator #586e75
@@ -188,10 +186,10 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMI
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 
 # Calculator key
-bindsym XF86Calculator exec xcalc
+bindsym XF86Calculator exec qalculate-gtk
 
 # Screenshot
-bindsym $mod+Print exec xfce4-screenshooter --region -s $HOME/STACK/Public/Screenshots
+bindsym $mod+Print exec xfce4-screenshooter --region
 
 # Thunderbird new message
 for_window [title="Write:"] floating enable
@@ -223,11 +221,8 @@ exec '/usr/bin/icedove'
 
 exec --no-startup-id i3-msg 'exec /usr/bin/nm-applet'
 exec --no-startup-id i3-msg 'exec /usr/bin/stack'
-exec --no-startup-id i3-msg 'exec "java -jar $HOME/Downloads/davmail-linux-x86_64-4.7.2-2427/davmail.jar >> /var/log/davmail.log"'
-exec --no-startup-id i3-msg 'exec "/usr/bin/thunar --daemon"'
 
 # Slate theme: https://github.com/acrisci/i3-style/blob/master/themes/slate
-
 client.focused #586e75 #586e75 #fdf6e3 #268bd2
 client.focused_inactive #073642 #073642 #93a1a1 #002b36
 client.unfocused #002b36 #002b36 #586e75 #002b36

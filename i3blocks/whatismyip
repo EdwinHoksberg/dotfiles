@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-IP=$(curl -s icanhazip.com);
-
-case $BLOCK_BUTTON in
-    3) echo -n "$IP" | xclip -selection clipboard ;;
-    *) echo "$IP" ;;
-esac

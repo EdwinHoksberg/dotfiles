@@ -10,8 +10,6 @@ ZSH_THEME="edwinhoksberg"
 DEFAULT_USER="edwin"
 HIST_STAMPS="yyyy-mm-dd"
 
-plugins=(gitfast, history-substring-search, docker, composer)
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -30,3 +28,5 @@ alias gpg="gpg2"
 
 # Shell autocompletion
 for f in $ZSH_CUSTOM/*; do source $f; done
+
+plugins=(gitfast, history-substring-search, docker, composer)

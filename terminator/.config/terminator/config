@@ -31,7 +31,6 @@
     font = Source Code Pro Medium 10
     background_color = "#2d2d2d"
     scrollback_infinite = True
-    show_titlebar = False
 [layouts]
   [[default]]
     [[[child0]]]

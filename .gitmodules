@@ -1,9 +1,12 @@
 [submodule "vim/bundle/vim-airline"]
-	path = vim/bundle/vim-airline
+	path = vim/.vim/bundle/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
 [submodule "vim/bundle/vim-gitgutter"]
-	path = vim/bundle/vim-gitgutter
+	path = vim/.vim/bundle/vim-gitgutter
 	url = git@github.com:airblade/vim-gitgutter.git
 [submodule "vim/bundle/vim-indent-guides"]
-	path = vim/bundle/vim-indent-guides
+	path = vim/.vim/bundle/vim-indent-guides
 	url = git@github.com:nathanaelkane/vim-indent-guides.git
+[submodule "i3/.config/i3blocks"]
+	path = i3/.config/i3blocks
+	url = git@github.com:vivien/i3blocks-contrib.git
