@@ -26,7 +26,7 @@ export JRE_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre
 alias rm="rm -I"
 alias gpg="gpg2"
 
-# Shell autocompletion
+# Themes, Plugins and Shell autocompletion
 for f in $ZSH_CUSTOM/*; do source $f; done
 
-plugins=(gitfast, history-substring-search, docker, composer)
+plugins=(gitfast, history-substring-search, docker, composer, zsh-autosuggestions)

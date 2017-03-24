@@ -10,3 +10,6 @@
 [submodule "i3/.config/i3blocks"]
 	path = i3/.config/i3blocks
 	url = git@github.com:vivien/i3blocks-contrib.git
+[submodule "zsh/.zsh_custom/plugins/zsh-autosuggestions"]
+	path = zsh/.zsh_custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
