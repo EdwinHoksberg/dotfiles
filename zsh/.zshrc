@@ -19,8 +19,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 export GNUPGHOME=$HOME/.gnupg
 
 export GOPATH=$HOME/Code/Go
-export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
-export JRE_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre
+export JAVA_HOME=/usr/lib/jvm/default-java
+export JRE_HOME=/usr/lib/jvm/default-java/jre
 
 # Aliasses
 alias rm="rm -I"
