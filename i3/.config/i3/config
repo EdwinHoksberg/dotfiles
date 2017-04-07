@@ -127,7 +127,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+Control+l exec "/home/edwin/bin/i3lock-fancy"
+bindsym $mod+Control+l exec $HOME/bin/i3lock-fancy
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -151,12 +151,12 @@ bindsym $mod+r mode "resize"
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id /home/edwin/bin/i3exit lock, mode "default"
-    bindsym e exec --no-startup-id /home/edwin/bin/i3exit logout, mode "default"
-    bindsym s exec --no-startup-id /home/edwin/bin/i3exit suspend, mode "default"
-    bindsym h exec --no-startup-id /home/edwin/bin/i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id /home/edwin/bin/i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id /home/edwin/bin/i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id $HOME/bin/i3exit lock, mode "default"
+    bindsym e exec --no-startup-id $HOME/bin/i3exit logout, mode "default"
+    bindsym s exec --no-startup-id $HOME/bin/i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id $HOME/bin/i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id $HOME/bin/i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id $HOME/bin/i3exit shutdown, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -192,6 +192,9 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 # Switch back and forth between last windows
 bindsym $mod+Tab workspace back_and_forth
 
+# Switch to next numbered workspace
+bindsym $mod+n exec $HOME/bin/i3-new-workspace
+
 # Media keys
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
@@ -224,15 +227,12 @@ for_window [class="vivaldi-stable"] layout tabbed
 for_window [title="Developer Tools"] layout default
 
 # Autostart applications
-exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/edwin/.i3/workspace-1.json'"
-exec '/usr/bin/firefox'
-exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/edwin/.i3/workspace-2.json'"
+exec '/usr/bin/vivaldi'
 exec '/usr/bin/terminator'
-exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/edwin/.i3/workspace-3.json'"
 exec '/usr/bin/icedove'
 
 exec --no-startup-id i3-msg 'exec /usr/bin/nm-applet'
-exec --no-startup-id i3-msg 'exec /usr/bin/stack'
+exec --no-startup-id i3-msg 'exec /usr/bin/owncloud'
 
 # Slate theme: https://github.com/acrisci/i3-style/blob/master/themes/slate
 client.focused #586e75 #586e75 #fdf6e3 #268bd2
