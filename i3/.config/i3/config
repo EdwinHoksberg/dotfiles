@@ -204,7 +204,9 @@ bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMI
 bindsym XF86Calculator exec qalculate-gtk
 
 # Screenshot
-bindsym $mod+Print exec xfce4-screenshooter --region
+bindsym Print exec scrot $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Print exec scrot -u $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Shift+Print exec scrot -s $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Thunderbird new message
 for_window [title="Write:"] floating enable
