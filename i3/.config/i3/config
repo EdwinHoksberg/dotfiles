@@ -204,9 +204,9 @@ bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMI
 bindsym XF86Calculator exec qalculate-gtk
 
 # Screenshot
-bindsym Print exec scrot $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym $mod+Print exec scrot -u $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym $mod+Shift+Print exec scrot -s $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym Print exec scrot $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Print exec scrot -u $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot active window" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Shift+Print exec scrot -s $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot selection" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Thunderbird new message
 for_window [title="Write:"] floating enable
@@ -226,7 +226,7 @@ for_window [title="PhpStorm"] layout tabbed
 
 # Vivaldi
 for_window [class="vivaldi-stable"] layout tabbed
-for_window [title="Developer Tools"] layout default
+for_window [title="Developer Tools"] floating enable
 
 # Autostart applications
 exec '/usr/bin/vivaldi'
