@@ -17,7 +17,7 @@ autocmd FileType gitcommit setlocal colorcolumn=51
 
 " make tab 4 spaces long
 set tabstop=4
-set shiftwidth=4 
+set shiftwidth=4
 set smarttab
 set expandtab
 
@@ -61,7 +61,7 @@ endfunction
 autocmd VimEnter * call AirlineInit()
 
 " gitgutter plugin
-let g:gitgutter_realtime = 1 
+let g:gitgutter_realtime = 1
 let g:gitgutter_highlight_lines = 0
 
 " indent guides plguin
