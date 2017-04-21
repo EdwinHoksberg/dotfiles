@@ -206,7 +206,7 @@ bindsym XF86Calculator exec qalculate-gtk
 # Screenshot
 bindsym Print exec scrot $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym $mod+Print exec scrot -u $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot active window" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym $mod+Shift+Print exec scrot -s $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot selection" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Shift+Print exec sleep 0.2 && scrot -s $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png && notify-send "Screenshot selection" $HOME/STACK/Public/Screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Thunderbird new message
 for_window [title="Write:"] floating enable
