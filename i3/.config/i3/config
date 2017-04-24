@@ -193,7 +193,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 bindsym $mod+Tab workspace back_and_forth
 
 # Switch to next numbered workspace
-bindsym $mod+n exec $HOME/bin/i3-new-workspace
+bindsym $mod+n exec $HOME/.zsh_custom/bin/i3-new-workspace
 
 # Media keys
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle && pkill -RTMIN+1 i3blocks
