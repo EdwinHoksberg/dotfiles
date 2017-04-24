@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# -e: Exit if command does not return success(0)
+# -x: Show all commands executed
+set -ex
+
+if [ -z "$BACKBLAZE_USER" ] || [ -z "$BACKBLAZE_KEY" ] || [ -z "$BACKBLAZE_BUCKET" ]; then
+    echo "Make sure that \$BACKBLAZER_USER, \$BACKBLAZE_KEY and \$BACKBLAZE_BUCKET are set."
+    exit
+fi
+
+readonly DUPLICITY=/usr/bin/duplicity
+readonly BACKUP_DIR=/home/edwin
+
+FTP_PASSWORD=$BACKBLAZE_KEY \
+$DUPLICITY incremental \
+    -vInfo \
+    --encrypt-key '5357A70A' \
+\
+    --include "$BACKUP_DIR/Desktop" \
+    --include "$BACKUP_DIR/Documents" \
+    --include "$BACKUP_DIR/Music" \
+    --include "$BACKUP_DIR/Videos" \
+    --include "$BACKUP_DIR/Pictures" \
+\
+    --include "$BACKUP_DIR/bin" \
+    --include "$BACKUP_DIR/src" \
+    --include "$BACKUP_DIR/.config" \
+\
+    --exclude "$BACKUP_DIR/*" \
+    --exclude "$BACKUP_DIR/**/*/node_modules" \
+    --exclude "$BACKUP_DIR/**/*/vendor" \
+    --exclude "$BACKUP_DIR/**/*/.git" \
+\
+    $BACKUP_DIR \
+    b2://$BACKBLAZE_USER@$BACKBLAZE_BUCKET \
+;

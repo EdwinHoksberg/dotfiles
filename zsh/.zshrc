@@ -27,6 +27,7 @@ alias rm="rm -I"
 alias gpg="gpg2"
 
 # Themes, Plugins and Shell autocompletion
-for f in $ZSH_CUSTOM/*; do source $f; done
+for f in $ZSH_CUSTOM/source/*; do source $f; done
+for f in $ZSH_CUSTOM/exec/*; do $f; done
 
 plugins=(gitfast, history-substring-search, docker, composer, zsh-autosuggestions)
