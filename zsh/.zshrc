@@ -31,3 +31,6 @@ for f in $ZSH_CUSTOM/source/*; do source $f; done
 for f in $ZSH_CUSTOM/exec/*; do $f; done
 
 plugins=(gitfast, history-substring-search, docker, composer, zsh-autosuggestions)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
