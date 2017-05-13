@@ -235,6 +235,7 @@ exec '/usr/bin/icedove'
 
 exec --no-startup-id i3-msg 'exec /usr/bin/nm-applet'
 exec --no-startup-id i3-msg 'exec /usr/bin/owncloud'
+exec --no-startup-id i3-msg 'exec /usr/bin/solaar'
 
 # Slate theme: https://github.com/acrisci/i3-style/blob/master/themes/slate
 client.focused #586e75 #586e75 #fdf6e3 #268bd2
