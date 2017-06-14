@@ -13,7 +13,17 @@ HIST_STAMPS="yyyy-mm-dd"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH=/sbin:/usr/sbin:/usr/local/bin:/usr/lib/go-1.8/bin:$HOME/bin:$HOME/Code/Go/bin:$HOME/.phpbrew/bin:$PATH
+PATH=/sbin:$PATH
+PATH=/usr/sbin:$PATH
+PATH=/usr/local/bin:$PATH
+PATH=/usr/lib/go-1.8/bin:$PATH
+PATH=$HOME/bin:$PATH
+PATH=$HOME/Code/Go/bin:$PATH
+PATH=$HOME/.phpbrew/bin:$PATH
+PATH=$HOME/.config/composer/vendor/bin:$PATH
+
+export PATH
+
 export EDITOR='vim'
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 export GNUPGHOME=$HOME/.gnupg
