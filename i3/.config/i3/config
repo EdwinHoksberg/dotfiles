@@ -237,7 +237,7 @@ for_window [title="^CSSH"] floating enable
 # Autostart applications
 exec '/usr/bin/vivaldi'
 exec '/usr/bin/terminator'
-exec '/usr/bin/icedove'
+exec '/usr/bin/thunderbird'
 
 exec --no-startup-id i3-msg 'exec /usr/bin/nm-applet'
 exec --no-startup-id i3-msg 'exec /usr/bin/owncloud'
