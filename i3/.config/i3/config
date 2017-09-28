@@ -231,6 +231,9 @@ for_window [title="PhpStorm"] layout tabbed
 for_window [class="vivaldi-stable"] layout tabbed
 for_window [title="Developer Tools"] floating enable
 
+# Clusterssh
+for_window [title="^CSSH"] floating enable
+
 # Autostart applications
 exec '/usr/bin/vivaldi'
 exec '/usr/bin/terminator'
