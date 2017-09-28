@@ -9,6 +9,7 @@
 	ci = commit
     st = status
     ll = log --graph --oneline --decorate --date=short --pretty=format:'%ad %h %Cgreen%an %Cred%d %Creset%s'
+    up = pull --rebase --autostash
 [core]
     autocrlf = input
     safecrlf = warn
