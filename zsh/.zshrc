@@ -19,7 +19,6 @@ PATH=/usr/local/bin:$PATH
 PATH=/usr/lib/go-1.8/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=$HOME/Code/Go/bin:$PATH
-PATH=$HOME/.phpbrew/bin:$PATH
 PATH=$HOME/.config/composer/vendor/bin:$PATH
 
 export PATH
