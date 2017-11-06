@@ -1,0 +1,16 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    echo "Syntax: ${0} [5.6|7.0|etc.]"
+    exit 1
+fi
+
+if [ ! -d "/etc/php/$1" ]; then
+    echo "PHP version '$1' not available"
+    exit 1
+fi
+
+sudo update-alternatives --set php /usr/bin/php$1
+sudo update-alternatives --set php-config /usr/bin/php-config$1
+sudo update-alternatives --set phpize /usr/bin/phpize$1
+

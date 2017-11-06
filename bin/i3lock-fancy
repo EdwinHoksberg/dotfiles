@@ -1,0 +1,43 @@
+#!/bin/sh
+
+log() {
+    logger -t 'i3lock-fancy' "$@"
+}
+
+B='#00000000'  # blank
+C='#ffffff22'  # clear-ish
+D='#ff00ffcc'  # default
+T='#ee00eeee'  # text
+W='#880000bb'  # wrong
+V='#bb00bbbb'  # verifying
+
+log "Locking desktop..."
+
+i3lock              \
+--insidevercolor=$C   \
+--ringvercolor=$V     \
+\
+--insidewrongcolor=$C \
+--ringwrongcolor=$W   \
+\
+--insidecolor=$B      \
+--ringcolor=$D        \
+--linecolor=$B        \
+--separatorcolor=$D   \
+\
+--textcolor=$T        \
+--timecolor=$T        \
+--datecolor=$T        \
+--keyhlcolor=$W       \
+--bshlcolor=$W        \
+\
+--blur 5              \
+--clock               \
+--indicator           \
+--timestr="%H:%M:%S"  \
+--datestr="%A, %d-%m-%Y" \
+--show-failed-attempts \
+--nofork
+
+log "Unlocking desktop..."
+
