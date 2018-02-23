@@ -175,6 +175,7 @@ bindsym $mod+Shift+bracketleft move workspace to output left
 bar {
   position top
   font pango:Source Code Pro-10 10
+  tray_output primary
   status_command i3blocks -c $HOME/.config/i3/blocks.conf
 
   colors {
@@ -230,6 +231,7 @@ for_window [title="PhpStorm"] layout tabbed
 # Vivaldi
 for_window [class="vivaldi-stable"] layout tabbed
 for_window [title="Developer Tools"] floating enable
+for_window [title="Vivaldi Profile Manager"] floating enable
 
 # Clusterssh
 for_window [title="^CSSH"] floating enable
