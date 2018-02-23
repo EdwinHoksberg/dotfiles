@@ -6,8 +6,12 @@
 [alias]
 	co = checkout
 	br = branch
-	ci = commit
+    ci = commit -v
+    cp = "!git commit -v && git push origin $(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
     st = status
+    ds = diff --staged -w
+    ps = "!git push origin $(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
+    pl = "!git pull origin $(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
     ll = log --graph --oneline --decorate --date=short --pretty=format:'%ad %h %Cgreen%an %Cred%d %Creset%s'
     up = pull --rebase --autostash
 [core]
@@ -19,4 +23,8 @@
 [merge]
 	tool = meld
 [diff]
-	compactionHeuristic = true
+    compactionHeuristic = true
+[transfer]
+    fsckObjects = true
+[color]
+	ui = auto
