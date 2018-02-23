@@ -34,12 +34,12 @@ export JRE_HOME=/usr/lib/jvm/default-java/jre
 # Aliasses
 alias rm="rm -I"
 alias gpg="gpg2"
+alias phpx="php -dxdebug.remote_autostart -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1"
 
 # Themes, Plugins and Shell autocompletion
 for f in $ZSH_CUSTOM/source/*; do source $f; done
 for f in $ZSH_CUSTOM/exec/*; do $f; done
 
-plugins=(gitfast, history-substring-search, docker, composer, zsh-autosuggestions)
+plugins=(gitfast, docker, composer, zsh-autosuggestions)
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.yarn/bin:$PATH"
