@@ -18,7 +18,6 @@ autocmd FileType gitcommit setlocal colorcolumn=51
 " make tab 4 spaces long
 set tabstop=4
 set shiftwidth=4
-set smarttab
 set expandtab
 
 " disable compatibity mode
