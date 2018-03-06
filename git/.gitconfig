@@ -24,7 +24,5 @@
 	tool = meld
 [diff]
     compactionHeuristic = true
-[transfer]
-    fsckObjects = true
 [color]
 	ui = auto
