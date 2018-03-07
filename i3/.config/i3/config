@@ -237,8 +237,8 @@ for_window [title="Vivaldi Profile Manager"] floating enable
 for_window [title="^CSSH"] floating enable
 
 # Autostart applications
-exec '/usr/bin/vivaldi'
-exec '/usr/bin/terminator'
+exec '/usr/bin/x-www-browser'
+exec '/usr/bin/i3-sensible-terminal'
 exec '/usr/bin/thunderbird'
 
 exec --no-startup-id i3-msg 'exec /usr/bin/nm-applet'
