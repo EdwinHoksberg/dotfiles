@@ -9,8 +9,8 @@ if [ -z "$BACKBLAZE_USER" ] || [ -z "$BACKBLAZE_KEY" ] || [ -z "$BACKBLAZE_BUCKE
     exit
 fi
 
-readonly DUPLICITY=/usr/bin/duplicity
-readonly BACKUP_DIR=/home/edwin
+readonly DUPLICITY=$(which duplicity)
+readonly BACKUP_DIR=$HOME
 
 FTP_PASSWORD=$BACKBLAZE_KEY \
 $DUPLICITY \
@@ -22,6 +22,7 @@ $DUPLICITY \
     --exclude "**/.git/" \
     --exclude "**/cache/" \
     --exclude "**/Cache/" \
+    --exclude "**/.config/vivaldi/" \
 \
     --include "$BACKUP_DIR/Desktop" \
     --include "$BACKUP_DIR/Documents" \
