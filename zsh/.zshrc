@@ -9,8 +9,8 @@ ZSH_CUSTOM=$ZSH_CUSTOM
 ZSH_THEME="edwinhoksberg"
 DEFAULT_USER="edwin"
 HIST_STAMPS="yyyy-mm-dd"
-
-source $ZSH/oh-my-zsh.sh
+ZSH_TMUX_AUTOSTART=true
+ZSH_TMUX_AUTOQUIT=false
 
 # User configuration
 PATH=/sbin:$PATH
@@ -40,6 +40,8 @@ alias phpx="php -dxdebug.remote_autostart -dxdebug.remote_enable=1 -dxdebug.remo
 for f in $ZSH_CUSTOM/source/*; do source $f; done
 for f in $ZSH_CUSTOM/exec/*; do $f; done
 
-plugins=(gitfast, docker, composer, zsh-autosuggestions)
+plugins=(git, docker, tmux)
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
