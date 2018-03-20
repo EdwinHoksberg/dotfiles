@@ -8,7 +8,6 @@ export LANG=en_US.UTF-8
 ZSH_CUSTOM=$ZSH_CUSTOM
 ZSH_THEME="edwinhoksberg"
 DEFAULT_USER="edwin"
-HIST_STAMPS="yyyy-mm-dd"
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_AUTOQUIT=false
 
@@ -20,6 +19,7 @@ PATH=/usr/lib/go-1.8/bin:$PATH
 PATH=$HOME/bin:$PATH
 PATH=$HOME/Code/Go/bin:$PATH
 PATH=$HOME/.config/composer/vendor/bin:$PATH
+PATH=$HOME/.cargo/bin:$PATH
 
 export PATH
 
