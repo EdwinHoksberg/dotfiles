@@ -36,12 +36,12 @@ alias rm="rm -I"
 alias gpg="gpg2"
 alias phpx="php -dxdebug.remote_autostart -dxdebug.remote_enable=1 -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1"
 
+plugins=(git, docker, tmux, zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
 # Themes, Plugins and Shell autocompletion
 for f in $ZSH_CUSTOM/source/*; do source $f; done
 for f in $ZSH_CUSTOM/exec/*; do $f; done
-
-plugins=(git, docker, tmux)
-
-source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$PATH"
